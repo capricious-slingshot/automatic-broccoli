@@ -1,4 +1,10 @@
-module.exports = (x, y, callback) => {
+// ES6 Syntax:
+// const rect = (x, y, callback) => { ... }
+
+// Depricated CommonJS Syntax:
+// export.modules = (x, y, callback) => { ... }
+
+const rect = (x, y, callback) => {
   if (x <= 0 || y <= 0) {
     callback(new Error(`Rectangle dimension must be greater than zero. Recieved: ${x}, ${y}`))
   } else {
@@ -12,5 +18,4 @@ module.exports = (x, y, callback) => {
   }
 }
 
-
-
+export default rect
